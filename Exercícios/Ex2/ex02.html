@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="jorge.css">
+
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+    <section id="sec">
+
+        <div id="ano">
+           Ano de Nascimento
+            <input type="number" name="idade" id="idade" min="0"> 
+        </div> 
+
+        <div id="sexo">Sexo:
+
+         <input type="radio" name="sex" id="masc" checked>
+         <label for="masc">Masculino</label>
+         <input type="radio" name="sex" id="fem">
+         <label for="fem">Feminino</label>
+
+        </div>
+        <input id="botao" type="button" value="Verificar" onmouseup = "Verificar()">
+
+        <div id="msg"></div>
+
+    </section>
+    <footer>
+
+    </footer>
+    <script src="cod.js"></script>
+</body>
+</html>

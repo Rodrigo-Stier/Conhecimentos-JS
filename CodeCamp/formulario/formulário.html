@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Free code camp Form</title>
+</head>
+<body>
+    <h1 id="title">Free code camp Form</h1>
+    <p id="description">formulariooooo</p>
+    <form id="survey-form">
+
+        <label id="name-label">Name<input type="text" id="name" placeholder="Enter Your Name" class="campo" required></label>
+        <label id="email-label">Email<input type="email" id="email" placeholder="Enter Your Email" class="campo" required></label>
+        <label id="number-label">Age (optional)<input type="number" id="number" min="13" max="120" placeholder="Age" class="campo"></label>
+
+        <label><p>sexo?</p>
+            <label id="radioT" class="int"><input value="123" type="radio" name="r" class="radio" checked> hmmmmmm?</label>
+            <label id="radioT" class="int"><input value="123" type="radio" name="r" class="radio"> hmmm</label>
+        </label>
+        <label class="gen">Qual seu filme favorito?
+            <select id="dropdown" class="campo">
+                <option value="">(Selecione uma opção)</option>
+                <option value="1">Terror</option>
+                <option value="2">Ação</option>
+                <option value="3">Aventura</option>
+                <option value="4">Suspense</option>
+                <option value="5">Drama</option>
+                <option value="6">Comédia</option>
+            </select>
+        </label> 
+        <p>penes? penes penes</p>
+            <label class="int"><input type="checkbox" value="1"> sedadadwsadgsadg</label>
+            <label class="int"><input type="checkbox" value="2"> xoafasfsadf</label>
+            <label class="int"><input type="checkbox" value="3"> pesafasfadf</label>
+            <label class="int"><input type="checkbox" value="4"> nesasdgasgag</label>
+            <label class="int"><input type="checkbox" value="5"> gordosdagsgsa<label>
+            <label class="comm">Any comments or suggestions?</label>
+            <textarea name="textarea" id="textarea" cols="50" rows="5"></textarea>
+            <input class="botao" type="submit" name="enviar" value="send" id="submit">
+    </form>
+</body>
+</html>

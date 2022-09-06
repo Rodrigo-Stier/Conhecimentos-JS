@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest Calculator</title>
+</head>
+<style>
+
+  body {
+      background-color: black;
+      font: normal 20pt arial;
+     color : rgba(59, 181, 230, 0.904);
+
+
+  }
+  h1{
+  
+    font: large 17pt arial;
+    color: rgba(128, 18, 95, 0.884);
+  }
+  p {
+    color: rgba(29, 43, 161, 0.884);
+    font: normal 20pt arial;
+  }
+  line {
+    color: rgba(18, 179, 45, 0.986);
+    font: normal 20pt arial;
+  }
+</style>
+<body>
+<script>
+window.confirm('Responda usando somente unidades numericas')
+var salario = Number(window.prompt(' Renda Mensal :'))
+var porc = Number(window.prompt('Porcentagem da renda a ser investida mensalmente :'))
+var t = Number(window.prompt('Tempo de investimento (em meses):'))
+var I = Number(window.prompt('Porcentagem de juros sobre o investimento :'))
+i = I / 100// Transformar em porcentagem o valor estipulado
+M1 = porc / 100  // = = = = = 
+T = t / 12 // Tempo em anos
+C = salario * M1 // Porcentagem do salario a ser investida mensalmente
+At = t * C  // Dinheiro investido total
+AC = (1 + i) ** t - 1 // (ac - ac4) execuçao da formula 
+AC2 = AC / i
+AC3 = 1 + i  
+AC4 = AC2 * AC3 * C
+AC5 = AC4 - At // Lucro limpo (sem contar o dinheiro investido)
+document.write('<h1><strong>Rendimento</strong></h1>')
+document.write(`  Em um periodo de tempo de <strong>${T.toFixed(1)} anos</strong>,
+<br/> com aporte mensal de <strong>${C.toLocaleString('pt-BR',{style :'currency', currency: 'BRL'})}</strong>
+<br/>e juros sobre o investimento de <strong>${I}% ao mês</strong>; 
+<p>Seu rendimento total é : <line>${AC5.toLocaleString('pt-BR',{style :'currency', currency: 'BRL'})}</line></p>`)
+
+</script>
+</body>
+</html>

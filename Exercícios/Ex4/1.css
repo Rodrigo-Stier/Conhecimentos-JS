@@ -1,0 +1,35 @@
+body{
+    background: red;
+}
+h1{
+    text-align: center;
+    font: normal 26pt calibri;
+}
+section{
+    background: blue;
+    height: 200px;
+    width: 400px;
+    padding: 50px;
+    margin: auto;
+    text-align: center;
+    font: normal 14pt arial;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+}
+div#dobotao{
+    margin-top: 10px;
+}
+input#I{
+    margin-bottom: 5px;
+    width: 50px;
+}
+input#F{
+    margin-bottom: 5px;
+    width: 50px;
+    margin-left: 8px; 
+}
+input#P{
+    margin-bottom: 5px;
+    width: 50px;
+    margin-right: 7px; 
+}

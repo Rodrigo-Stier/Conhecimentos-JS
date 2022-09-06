@@ -1,0 +1,60 @@
+body#jorge {
+    background: rgb(224, 50, 50);
+    font:normal 15pt arial;
+}
+
+h1{ color: black;
+    font-family:'Helvetica';
+    text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.384);
+}
+
+header{
+    color: white;
+    text-align: center;
+}
+
+section#sec {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.555);
+    background: radial-gradient(
+        300px, rgb(214, 213, 218), rgb(255, 255, 255)
+    )
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
+div#foto{
+    margin: auto;
+    text-align: center;
+    margin-top: 30px
+}
+
+div#msg {
+    font: 23pt arial;
+    text-align: center;
+    margin-top: 10px;
+    text-shadow: 0.5pc 0.5pc 4px rgb(0, 0, 0);
+    transform: translateY(0px);
+    animation: float 3s ease-in-out infinite ;
+    
+}
+
+@keyframes float {
+    0%  {
+        transform: translateY(0px);            
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,116 @@
+body {
+    background-color: rgb(77, 24, 24);
+    width: 100%;
+    margin: 0;
+    color: rgb(170, 128, 128);
+    font-family: Tahoma;
+    font-size: 16pt;
+
+}
+
+::-webkit-scrollbar {
+    background-color:rgb(163, 49, 43);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 3%;
+    padding-bottom: 1%;
+    color: rgba(255, 255, 255, 0.741);
+}
+  
+p#description {
+    color: rgba(255, 85, 85, 0.569);
+    text-align: center;
+    margin-top: -20px;
+    padding-bottom: 2%;
+}
+  
+form {
+    margin: auto;
+    width: 35%;
+    background-color: rgba(255, 13, 0, 0.11);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 2%;
+}
+  
+label {
+    display: block;
+    padding-top: 5px;
+    margin: 0.5rem 0;
+}
+  
+.campo,input#submit {
+    display: block;
+    width: 98%;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 16pt;
+    text-indent: 10px;
+    border: 1px solid rgba(163, 49, 43, 0.365);
+    background-color: rgba(163, 49, 43, 0.365);
+    color: rgb(163, 49, 43);
+    margin: 10px auto;
+}
+  
+.campo option{
+    background: rgb(92, 28, 24);
+}
+  
+.campo:focus {
+    outline: none;
+    border: 1px solid rgba(255, 78, 69, 0.637);
+    background: rgba(163, 49, 43, 0.365);
+    color: rgba(255, 78, 69, 0.637);
+}
+  
+::placeholder {
+    color: rgb(163, 49, 43);
+}
+  
+input#submit {
+    padding-right: 22px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(163, 49, 43, 0.365);
+    color: rgb(226, 70, 62);
+    font-size: 20pt;
+}
+  
+input#submit:hover {
+    background-color: rgba(129, 16, 10, 0.365);
+    transition: 0.7s;
+}
+  
+textarea {
+    margin-bottom: 2px;
+    width: 98.5%;
+    border: solid brown;
+    border-radius: 5px;
+    background-color: rgba(163, 49, 43, 0.365);
+}
+  
+.int{
+    font-size: 14pt;
+}
+  
+p {
+    margin-bottom: 5px;
+}
+  
+.comm {
+    margin-bottom: 10px;
+    font-size: 16pt;
+}
+
+textarea:focus{
+    outline: none;
+    border: solid rgba(255, 78, 69, 0.637);
+    background: rgba(163, 49, 43, 0.365);
+    color: rgba(255, 78, 69, 0.637);
+}
+  
+.int input[type="checkbox"],.radio{
+    accent-color: rgba(163, 49, 43, 0.365);
+}

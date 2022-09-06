@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Invest Calculator 2.0</title>
+ <style>
+     div#res {
+         margin-top: 20px;
+         margin-left: 12px;
+         font: 18pt impact;
+         color: black;
+         background-color: rgb(136, 16, 126);
+         width:215px;
+         height: 30px;
+         text-align: center;
+         border-style:groove ;
+         border-color: rgb(33, 150, 33) ;
+         border-width: 6px;
+         max-width: 640px;
+         transform: translateY(0px) ;
+         animation: float 1s ease-in-out infinite;
+     }
+    @keyframes float {
+         0%  {
+             transform: translateY(0px);             
+         }
+         50% {
+             transform: translateY(5px);
+         }
+         100%{
+             transform: translateY(0px);
+         }
+     }
+     body {
+            font: normal 16pt calibri;
+            background-color: rgb(0, 0, 0);
+            color: rgb(42, 155, 80);
+     }
+     line#x { 
+         font: normal 14pt impact;
+         color:rgb(136, 16, 126)
+     }
+     input#tempo {
+         width: 50px;
+         height: 30px;
+         background: rgb(136, 16, 126);
+         margin-bottom: 5px;
+         margin-left: 24px;
+         margin-top: 5px;
+         font: 11pt arial;
+     }
+     input#porc {
+         margin-top: 5px;
+         margin-left: 25px;
+         margin-bottom: 5px;
+         width: 50px;
+         background:rgb(136, 16, 126);
+         height: 30px;
+     }
+     input#somar {
+         font: 18pt impact;
+         margin-left: 10px;
+         width: 230px;
+         height: 60px;
+         background: rgb(42, 155, 80);
+         margin-top: 20px;
+         border-style:solid ;
+         border-color: rgb(136, 16, 126);
+         border-radius: 10px;
+         border-width: 5px;
+     }
+     h1 {
+         color: rgb(35, 184, 85);
+         font: 35pt arial;
+         text-align:center ;
+         margin-left: 150px;
+         margin-right: 800px;
+         border-style:groove ;
+         border-width:  10px;
+         border-right-color: rgb(0, 0, 0);
+         border-left-color: rgb(0, 0, 0);
+         border-bottom-color: rgb(136, 16, 126);
+         border-top-color: rgb(0, 0, 0);
+     }
+     input#juros {
+         margin-top: 5px;
+         margin-left: 9px;
+         margin-bottom: 5px;
+         width: 50px;
+         height: 30px;
+         background: rgb(136, 16, 126);
+     }
+     input#renda {
+         margin-left: 94px;
+         background: rgb(136, 16, 126);
+         width: 50px;
+         height: 30px;
+         margin-bottom: 5px;
+     }
+ </style>
+</head>
+
+<body>
+  <h1><strong>Juros + Aporte</strong></h1>
+
+  <line id ="x">Renda Mensal</line>
+  <input type="number" name="txt1" id="renda"> $
+
+  <br/><line id ="x">Tempo de investimento</line>
+  <input id = "tempo" type="number" name="txt3"> Meses
+
+  <br/><line id ="x">Porcentagem Investida</line>
+  <input id = "porc"type="number" name="txt2" > %
+
+  <br/><line id ="x">Juros sobre investimento</line>
+  <input type="number" name="txt4" id="juros"> %
+
+  <br/><input id = "somar" type ="button" value= "Calcular" onmousedown = "somar()" onmouseenter="arD()" onmouseout = "arF()" onmouseup = "click2()" style="font: 18pt arial;">
+
+ <div id ="res"> Lucro </div>
+
+ <script>
+     var b = document.querySelector('input#somar')
+     b.style.background = 'rgb(33, 163, 33)'
+
+     function click2() {
+         b.style.background = 'rgb(33, 163, 33)'
+     }
+     function somar(){
+         b.style.background = 'rgb(136, 16, 126)'
+         var t1 = window.document.querySelector('input#renda')
+         var t2 = window.document.querySelector('input#porc')
+         var t3 = window.document.querySelector('input#tempo')
+         var t4 = window.document.querySelector('input#juros')
+         var tr = Number(t1.value)
+         var tp = Number(t2.value)
+         var tt = Number(t3.value) 
+         var tj = Number(t4.value)
+         i = tj / 100
+         M1 = tp /100
+         C = tr * M1
+         C2 = ((1+i) ** tt - 1)/ i
+         C3 = C2 * (tr * M1) * (1 + i) - (tt * C)
+         var res = document.querySelector('div#res')
+         res.innerHTML = C3.toLocaleString('pt-BR',{style :'currency',   currency: 'BRL'})
+     }
+     function arD(){
+         b.style.background = 'rgb(90, 190, 115)'
+     }
+     function arF() {
+         b.style.background = 'rgb(33, 163, 33)'
+     }
+ </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        h1 { 
+            font: 40pt arial;
+            color : rgba(146, 27, 27, 0.877) 
+         }
+        body { 
+            background-color: rgb(6, 6, 8);
+            color : green;
+            font: 20pt arial ;
+        }
+
+        </style>
+</head>
+<body>
+    <h1>Ex Dom</h1>
+    <p>qwieuqwe</p>
+    <p>qweqwpe </p>
+    <div class="cu"> bluebleube</div>
+    <div id="cu"> cuuuu </div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+        p1.style.background = 'violet'
+        var p2 = window.document.querySelector('div#cu')
+        p2.style.color = 'blue'
+        var p3 = window.document.querySelector('div.cu')
+        p3.style.color = 'yellow'
+        
+    </script>
+
+</body>
+</html>
